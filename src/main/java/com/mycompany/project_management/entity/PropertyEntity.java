@@ -15,12 +15,11 @@ import java.util.Date;
 public class PropertyEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
     private String description;
-    private String ownerName;
-    private String ownerEmail;
+
     private Double price;
     private String address;
     private Date date;
@@ -48,21 +47,7 @@ public class PropertyEntity {
         this.description = description;
     }
 
-    public String getOwnerName() {
-        return ownerName;
-    }
 
-    public void setOwnerName(String ownerName) {
-        this.ownerName = ownerName;
-    }
-
-    public String getOwnerEmail() {
-        return ownerEmail;
-    }
-
-    public void setOwnerEmail(String ownerEmail) {
-        this.ownerEmail = ownerEmail;
-    }
 
     public Double getPrice() {
         return price;
